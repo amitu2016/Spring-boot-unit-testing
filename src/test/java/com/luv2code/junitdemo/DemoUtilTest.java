@@ -15,4 +15,16 @@ class DemoUtilTest {
 		
 	}
 	
+	@Test
+	void testNullandNotNullObject() {
+		DemoUtils demo = new DemoUtils();
+		
+		String str1 = null;
+		String str2 = "Amit";
+		
+		Assertions.assertNotNull(demo.checkNull(str2), "Object should not be null");
+		Assertions.assertNull(demo.checkNull(str1), "Object Should be null");
+		
+	}
+	
 }
